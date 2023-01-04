@@ -1,0 +1,16 @@
+name: CI
+on:
+  workflow_dispatch:
+jobs:
+  build-vindriktning:
+    runs-on: ubuntu-latest
+    container:
+      image: blakadder/docker-tasmota
+      volumes:
+        - my_docker_volume:/volume_mount
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - name: test
+        run: ls -la .
