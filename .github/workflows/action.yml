@@ -1,4 +1,4 @@
-name: CI
+name: Compile Tasmota
 on:
   workflow_dispatch:
 jobs:
@@ -13,4 +13,4 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
       - name: test
-        run: ls -la .
+        run: find /
