@@ -12,7 +12,7 @@ jobs:
           git clone -b master https://github.com/arendst/Tasmota.git /tasmota
           git clone https://github.com/joBr99/tasmo-compile.git /input
           cp /input/vindriktning/* /tasmota/tasmota/
-          /entrypoint.sh
+          bash /entrypoint.sh
       - name: Archive artifacts
         uses: actions/upload-artifact@v2
         with:
