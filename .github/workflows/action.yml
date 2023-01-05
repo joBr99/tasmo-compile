@@ -11,6 +11,7 @@ jobs:
         run: |
           git clone -b master https://github.com/arendst/Tasmota.git /tasmota
           git clone https://github.com/joBr99/tasmo-compile.git /input
+          find /input
           cp /input/vindriktning/* /tasmota/tasmota/
           find /tasmota/tasmota
           exit 1
