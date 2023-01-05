@@ -12,7 +12,8 @@ jobs:
           git clone -b master https://github.com/arendst/Tasmota.git /tasmota
           git clone https://github.com/joBr99/tasmo-compile.git /input
           find /input
-          cp /input/vindriktning/* /tasmota/tasmota/
+          cp /input/vindriktning/platformio_override.ini /tasmota/tasmota/platformio_override.ini
+          cp /input/vindriktning/user_config_override.h /tasmota/tasmota/user_config_override.h
           find /tasmota/tasmota
           exit 1
           bash /entrypoint.sh
